@@ -1,0 +1,23 @@
+{
+    "sections": {
+      "slider": {
+        "type": "slider",
+        "blocks": {
+          "heading": {
+            "type": "heading",
+            "settings": {
+                
+            }
+          }
+        },
+        "block_order": [
+          "heading"
+        ],
+        "settings": {}
+      }
+    },
+    "order": [
+      "slider"
+    ]
+  }
+  

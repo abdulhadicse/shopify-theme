@@ -6,5 +6,20 @@
     "theme_author": "Shopify",
     "theme_documentation_url": "https://github.com/Shopify/themekit",
     "theme_support_url": "https://github.com/Shopify/themekit/issues"
+  },
+  {
+    "name": "About us",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "about_image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "about_content",
+        "label": "Content"
+      }
+    ]
   }
 ]
