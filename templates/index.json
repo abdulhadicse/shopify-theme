@@ -29,11 +29,16 @@
             "collection_three_short_text": "",
             "collection_three_short_url": ""
         }
+      },
+      "trending-product":{
+        "type": "trending-product",
+        "settings": {}
       }
     },
     "order": [
       "slider",
-      "collection-list"
+      "collection-list",
+      "trending-product"
     ]
   }
   

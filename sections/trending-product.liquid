@@ -1,0 +1,78 @@
+<section class="products section bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title text-center">
+          <h2>{{ section.settings.heading_title }}</h2>
+        </div>
+      </div>
+
+      {% assign our_collection = collections[section.settings.product_collection] %}
+
+      <div class="row">
+        {% for item in our_collection.products limit: section.settings.product_collection_limit %}
+          <div class="col-md-4">
+            <div class="product-item">
+              <div class="product-thumb">
+                <img
+                  class="img-responsive"
+                  src="{{ item.featured_image | image_url: width: 2048 }}"
+                  alt="product-img"
+                />
+                <div class="preview-meta">
+                  <ul>
+                    <li>
+                      <a href="product-single.html"><i class="fa fa-search"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-heart-o"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fa fa-shopping-cart"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4><a href="product-single.html">{{ item.title  }}</a></h4>
+                <p class="price">{{ item.price |  money }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Trending Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_title",
+      "default": "Treanding Products",
+      "label": "Place a heading text."
+    },
+    {
+      "type": "header",
+      "content": "Pick a collection"
+    },
+    {
+      "type": "collection",
+      "id": "product_collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_collection_limit",
+      "label": "Pick a limit.",
+      "min": 3,
+      "max": 9,
+      "default": 6,
+      "step": 1
+    }
+  ]
+}
+{% endschema %}
