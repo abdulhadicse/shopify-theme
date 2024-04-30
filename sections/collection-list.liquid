@@ -1,0 +1,135 @@
+<section class="product-category">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title text-center">
+          <h2>{{ section.settings.heading_title }}</h2>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="category-box">
+          <a href="{{ section.settings.collection_one_short_url }}">
+            <img src="{{ section.settings.collection_one_image | image_url: width: 2048 }}" alt="">
+            <div class="content">
+              <h3>{{ section.settings.collection_one_heading_text }}</h3>
+              <p>{{ section.settings.collection_one_short_text }}</p>
+            </div>
+          </a>
+        </div>
+        <div class="category-box">
+          <a href="{{ section.settings.collection_two_short_url }}">
+            <img src="{{ section.settings.collection_two_image | image_url: width: 2048 }}" alt="">
+            <div class="content">
+              <h3>{{ section.settings.collection_two_heading_text }}</h3>
+              <p>{{ section.settings.collection_two_short_text }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="category-box category-box-2">
+          <a href="{{ section.settings.collection_three_short_url }}">
+            <img src="{{ section.settings.collection_three_image | image_url: width: 2048 }}" alt="">
+            <div class="content">
+              <h3>{{ section.settings.collection_three_heading_text }}</h3>
+              <p>{{ section.settings.collection_three_short_text }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection Lists",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_title",
+      "default": "Collection Heading",
+      "label": "Place a heading text."
+    },
+    {
+      "type": "header",
+      "content": "Collection One"
+    },
+    {
+      "type": "text",
+      "id": "collection_one_heading_text",
+      "default": "Collection One Heading",
+      "label": "Place a heading text."
+    },
+    {
+      "type": "textarea",
+      "id": "collection_one_short_text",
+      "default": "Collection Short Text",
+      "label": "Place a short text."
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_one_image",
+      "label": "Place a image."
+    },
+    {
+      "type": "url",
+      "id": "collection_one_short_url",
+      "label": "Place a collection url"
+    },
+    {
+      "type": "header",
+      "content": "Collection Two"
+    },
+    {
+      "type": "text",
+      "id": "collection_two_heading_text",
+      "default": "Collection Heading",
+      "label": "Place a heading text."
+    },
+    {
+      "type": "textarea",
+      "id": "collection_two_short_text",
+      "label": "Place a short text."
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_two_image",
+      "label": "Place a image."
+    },
+    {
+      "type": "url",
+      "id": "collection_two_short_url",
+      "label": "Place a collection url"
+    },
+    {
+      "type": "header",
+      "content": "Collection Three"
+    },
+    {
+      "type": "text",
+      "id": "collection_three_heading_text",
+      "default": "Collection Heading",
+      "label": "Place a heading text."
+    },
+    {
+      "type": "textarea",
+      "id": "collection_three_short_text",
+      "default": "Collection Short Text",
+      "label": "Place a short text."
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_three_image",
+      "label": "Place a image."
+    },
+    {
+      "type": "url",
+      "id": "collection_three_short_url",
+      "label": "Place a collection url"
+    }
+  ]
+}
+{% endschema %}

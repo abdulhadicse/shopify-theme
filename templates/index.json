@@ -6,7 +6,7 @@
           "heading": {
             "type": "heading",
             "settings": {
-                
+
             }
           }
         },
@@ -14,10 +14,26 @@
           "heading"
         ],
         "settings": {}
+      },
+      "collection-list":{
+        "type": "collection-list",
+        "settings": {
+            "heading_title": "Collection Lists",
+            "collection_one_heading_text": "",
+            "collection_one_short_text": "",
+            "collection_one_short_url": "",
+            "collection_two_heading_text": "",
+            "collection_two_short_text": "",
+            "collection_two_short_url": "",
+            "collection_three_heading_text": "",
+            "collection_three_short_text": "",
+            "collection_three_short_url": ""
+        }
       }
     },
     "order": [
-      "slider"
+      "slider",
+      "collection-list"
     ]
   }
   
