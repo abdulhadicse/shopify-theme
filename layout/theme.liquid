@@ -22,6 +22,8 @@
       {{ content_for_layout }}
     </main>
 
+    {% section 'footer'  %}
+
     <script src="{{ 'jquery-3.2.1.slim.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'popper.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'bootstrap.min.js' | asset_url }}" defer="defer"></script>
